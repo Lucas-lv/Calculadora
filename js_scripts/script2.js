@@ -54,6 +54,11 @@ function num0() {
   document.getElementById("resultado").innerHTML = numero;
 }
 
+function coma() {
+  numero=numero+".";
+  document.getElementById("resultado").innerHTML = numero;
+}
+
 function reseteo(){
   operadores =[];
   numeros=[];
@@ -102,26 +107,34 @@ function porcentaje(){
   document.getElementById("resultado").innerHTML="%";
 }
 
-function pi(){
+function raiz(){
   var local = document.getElementById("resultado").innerHTML;
   numeros.push(local);
-  operadores.push("π");
+  operadores.push("√");
   numero="";
-  document.getElementById("resultado").innerHTML="3,14";
+  document.getElementById("resultado").innerHTML="√";
+}
+
+function elevar(){
+  var local = document.getElementById("resultado").innerHTML;
+  numeros.push(local);
+  operadores.push("^");
+  numero="";
+  document.getElementById("resultado").innerHTML="^";
 }
 
 function igual(){
   var local = document.getElementById("resultado").innerHTML;
   numeros.push(local);
   let total = 0;
-  let resultat = parseInt(numeros[0]);
+  let resultat = parseFloat(numeros[0]);
   if(operadores[1]=="+")
   for (i = 1; i < numeros.length; i++){
-    total = parseInt(numeros[i]) + resultat;
+    total = parseFloat(numeros[i]) + resultat;
   }
   if(operadores[1]=="-")
   for (i = 1; i < numeros.length; i++){
-    total = resultat - parseInt(numeros[i]);
+    total = resultat - parseFloat(numeros[i]);
   }
   if(operadores[1]=="/")
   for (i = 1; i < numeros.length; i++){
@@ -129,11 +142,19 @@ function igual(){
   }
   if(operadores[1]=="*")
   for (i = 1; i < numeros.length; i++){
-    total = resultat * parseInt(numeros[i]);
+    total = resultat * parseFloat(numeros[i]);
   }
   if(operadores[1]=="%")
   for (i = 1; i < numeros.length; i++){
     total = (resultat * parseFloat(numeros[i]))/100;
+  }
+  if(operadores[1]=="√")
+  for (i = 1; i < numeros.length; i++){
+    total = Math.sqrt(parseFloat(numeros[i]));
+  }
+  if(operadores[1]=="^")
+  for (i = 1; i < numeros.length; i++){
+    total = Math.pow(resultat, parseFloat(numeros[i]));
   }
   numero = total;
   document.getElementById("resultado").innerHTML = numero;
