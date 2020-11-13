@@ -94,6 +94,13 @@ function multiplicar(){
   document.getElementById("resultado").innerHTML="*";
 }
 
+function porcentaje(){
+  var local = document.getElementById("resultado").innerHTML;
+  numeros.push(local);
+  operadores.push("%");
+  numero="";
+  document.getElementById("resultado").innerHTML="%";
+}
 
 function igual(){
   var local = document.getElementById("resultado").innerHTML;
@@ -115,6 +122,10 @@ function igual(){
   if(operadores[1]=="*")
   for (i = 1; i < numeros.length; i++){
     total = resultat * parseInt(numeros[i]);
+  }
+  if(operadores[1]=="%")
+  for (i = 1; i < numeros.length; i++){
+    total = (resultat * parseFloat(numeros[i]))/100;
   }
   numero = total;
   document.getElementById("resultado").innerHTML = numero;
