@@ -62,11 +62,6 @@ function reseteo(){
   document.getElementById("resultado").innerHTML = "";
 }
 
-function AC(){
-  numeros.pop();
-  document.getElementById("resultado").innerHTML = "";
-}
-
 function resta(){
   var local = document.getElementById("resultado").innerHTML;
   numeros.push(local);
