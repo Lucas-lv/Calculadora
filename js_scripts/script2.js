@@ -102,6 +102,14 @@ function porcentaje(){
   document.getElementById("resultado").innerHTML="%";
 }
 
+function pi(){
+  var local = document.getElementById("resultado").innerHTML;
+  numeros.push(local);
+  operadores.push("π");
+  numero="";
+  document.getElementById("resultado").innerHTML="3,14";
+}
+
 function igual(){
   var local = document.getElementById("resultado").innerHTML;
   numeros.push(local);
