@@ -162,5 +162,5 @@ function igual() {
 }
 
 function Inici() {
-  window.location.assign("../index.html");
+  window.location.assign('../index.html');
 }
