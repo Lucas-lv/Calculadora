@@ -56,7 +56,6 @@ function num0() {
 
 function coma() {
   numero = numero + ".";
-  target.removeEventListener(coma);
   document.getElementById("resultado").innerHTML = numero;
 }
 
