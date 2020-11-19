@@ -100,6 +100,30 @@ function multiplicar() {
   document.getElementById("resultado").innerHTML = "*";
 }
 
+function porcentaje() {
+  var local = document.getElementById("resultado").innerHTML;
+  numeros.push(local);
+  operadores.push("%");
+  numero = "";
+  document.getElementById("resultado").innerHTML = "%";
+}
+
+function raiz() {
+  var local = document.getElementById("resultado").innerHTML;
+  numeros.push(local);
+  operadores.push("√");
+  numero = "";
+  document.getElementById("resultado").innerHTML = "√";
+}
+
+function elevar() {
+  var local = document.getElementById("resultado").innerHTML;
+  numeros.push(local);
+  operadores.push("^");
+  numero = "";
+  document.getElementById("resultado").innerHTML = "^";
+}
+
 function igual() {
   var local = document.getElementById("resultado").innerHTML;
   numeros.push(local);
