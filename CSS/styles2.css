@@ -4,6 +4,7 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
+
 /* Sections
    ========================================================================== */
 /**
@@ -309,15 +310,14 @@ p {
   height: 40px;
   margin: 0 auto;
   align-content: center;
-
 }
 
-button{
+button {
   width: 40px;
   height: 40px;
 }
 
-form{
+form {
   background-color: grey;
   margin: 0 auto;
   align-content: center;
@@ -327,7 +327,7 @@ form{
   height: 250px;
 }
 
-button#inici{
+button#inici {
   width: 80px;
   height: 40px;
 }
