@@ -99,14 +99,14 @@ function igual() {
   var local = document.getElementById("resultado").innerHTML;
   numeros.push(local);
   let total = 0;
-  let resultat = parseInt(numeros[0]);
+  let resultat = parseFloat(numeros[0]);
   if (operadores[1] == "+")
     for (i = 1; i < numeros.length; i++) {
-      total = parseInt(numeros[i]) + resultat;
+      total = parseFloat(numeros[i]) + resultat;
     }
   if (operadores[1] == "-")
     for (i = 1; i < numeros.length; i++) {
-      total = resultat - parseInt(numeros[i]);
+      total = resultat - parseFloat(numeros[i]);
     }
   if (operadores[1] == "/")
     for (i = 1; i < numeros.length; i++) {
@@ -114,7 +114,7 @@ function igual() {
     }
   if (operadores[1] == "*")
     for (i = 1; i < numeros.length; i++) {
-      total = resultat * parseInt(numeros[i]);
+      total = resultat * parseFloat(numeros[i]);
     }
   numero = total;
   document.getElementById("resultado").innerHTML = numero;
