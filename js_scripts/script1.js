@@ -120,7 +120,6 @@ function igual() {
   document.getElementById("resultado").innerHTML = numero;
 }
 
-
 function Inici() {
   window.location.assign("../index.html");
 }

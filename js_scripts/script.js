@@ -21,7 +21,7 @@ function info(){
   txt += "Navegador Online: " + navigator.onLine + ",   ";
   txt += "Plataforma: " + navigator.platform + ",   ";
   txt += "Encabezado de agente de usuario: " + navigator.userAgent + ",   ";
-  txt += "Última modificación del CV: " + modDate.getDate() + "/" + (modDate.getMonth()+1) + "/" + (modYear+"");
+  txt += "Última modificación: " + modDate.getDate() + "/" + (modDate.getMonth()+1) + "/" + (modYear+"");
 
   alert(txt);
 

@@ -9,13 +9,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="html,cheatsheet" />
   <link rel="stylesheet" href="../CSS/styles1.css">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   <script src="../js_scripts/script1.js"></script>
 </head>
 
 <body>
   <h1>Calculadora</h1>
 
-
+<div id="form">
   <form>
     <div>
       <br>
@@ -45,10 +46,15 @@
       <button type="button" onclick="dividir()">/</button>
     </div>
   </form>
+</div>
   <br>
   <div>
     <button type="button" onclick="Inici()" id="inici">Inici</button>
   </div>
+  <br>
+  <br>
+  <script>
+    $("#form").offset({top:sessionStorage.getItem("y"),left:sessionStorage.getItem("x")});
+  </script>
 </body>
-
 </html>
