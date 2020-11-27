@@ -8,13 +8,14 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="html,cheatsheet" />
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   <link rel="stylesheet" href="../CSS/styles2.css">
   <script src="../js_scripts/script2.js"></script>
 </head>
 
 <body>
   <h1>Calculadora Científica</h1>
-
+<div id="form">
   <form>
     <div>
       <br>
@@ -48,10 +49,19 @@
       <button type="button" onclick="coma()">.</button>
     </div>
   </form>
+</div>
   <br>
   <div>
-    <button type="button" onclick="Inici()" id="inici">Inici</button>
+    <button type="button" onclick="Inici()" class="pagina">Inici</button>
   </div>
+  <br>
+  <br>
+  <form class="coordenadas" action="index.html" method="post">
+    <input type="number" id="x" required>
+    <input type="number" id="y" required>
+    <br>
+    <button type="button" onclick="mover()" class="pagina">Mover</button>
+  </form>
 </body>
 
 </html>
