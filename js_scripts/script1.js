@@ -120,6 +120,14 @@ function igual() {
   document.getElementById("resultado").innerHTML = numero;
 }
 
+function mover(){
+  var x = document.getElementById("x");
+  var y = document.getElementById("y");
+  $("#form").offset({top:sessionStorage.getItem("y"),left:sessionStorage.getItem("x")});
+  sessionStorage.setItem("x", x.value);
+  sessionStorage.setItem("y", y.value);
+}
+
 function Inici() {
   window.location.assign("../index.html");
 }
